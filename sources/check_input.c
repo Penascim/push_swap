@@ -1,42 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   check_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: penascim <penascim@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 17:36:52 by penascim          #+#    #+#             */
-/*   Updated: 2024/04/08 19:55:57 by penascim         ###   ########.fr       */
+/*   Created: 2024/04/08 19:39:21 by penascim          #+#    #+#             */
+/*   Updated: 2024/04/08 20:01:46 by penascim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long	ft_atoi(const char *nptr)
+int	checker(char **str)
 {
-	int		sig;
-	long	num;
+	int	i;
+	int	j;
 
-	sig = 1;
-	num = 0;
-	while (*nptr == 32 || (*nptr >= 9 && *nptr <= 13))
-		nptr++;
-	if (*nptr == '-' || *nptr == '+')
+	i = 0;
+	j = 0;
+	if (ft_atoi(str[j]) >= 2147483648)
+		return ("Error");
+	while (str[j])
 	{
-		if (*nptr == '-')
-			sig = -1;
-		nptr++;
+		i = 0;
+		while (str[j][i])
+		{
+			if (is_digit(str[j][i]))
+				i++;
+			else
+				return ("Error");
+		}
+		i = 0;
 	}
-	while (*nptr >= '0' && *nptr <= '9')
-	{
-		num *= 10;
-		num += *nptr++ - '0';
-	}
-	return (num * sig);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("%ld", ft_atoi("2147483649"));
-}
-*/
