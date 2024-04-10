@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: penascim <penascim@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 19:39:51 by penascim          #+#    #+#             */
-/*   Updated: 2024/04/10 19:24:17 by penascim         ###   ########.fr       */
+/*   Created: 2024/04/10 19:11:24 by penascim          #+#    #+#             */
+/*   Updated: 2024/04/10 19:45:04 by penascim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../header/push_swap.h"
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-int	main(int ac, char **av)
-{
-	if (check_ac(ac, av) == 0)
-		write(1, "Error", 5);
-	return (0);
-}
+# include "../libft/libft.h"
+# include <stdlib.h>
+# include <unistd.h>
+
+int	check_equal(char **av);
+int	check_av(char **av);
+int	check_ac(int ac, char **av);
+
+#endif
