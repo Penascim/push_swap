@@ -6,7 +6,7 @@
 /*   By: penascim <penascim@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 19:39:21 by penascim          #+#    #+#             */
-/*   Updated: 2024/04/10 19:25:47 by penascim         ###   ########.fr       */
+/*   Updated: 2024/04/19 18:47:36 by penascim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int	check_av(char **av)
 
 /*
 malloc below
-*/
+*/   7 9 6 5 3
 int	check_ac(int ac, char **av)
 {
 	char	**str;
